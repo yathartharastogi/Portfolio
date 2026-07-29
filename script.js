@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   - projects  : List featured side quests
   - exp       : View experience log
   - contact   : Get contact information
-  - matrix    : Easter egg mode 🕶️
+  - matrix    : Easter egg mode
   - clear     : Clear output window`;
         break;
 
@@ -121,8 +121,8 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
         break;
 
       case 'matrix':
-        response = `Wake up, Neo... The Matrix has you. 🟢 💊
-(Try clicking LAUNCH HORIZONTAL SPACE SHOOTER for the arcade game!)`;
+        response = `Wake up, Neo... The Matrix has you.
+(Click PLAY SPACE DEFENDER for the arcade shooter)`;
         break;
 
       case 'clear':
@@ -229,7 +229,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
 
 
   /* --------------------------------------------------------------------------
-     7. RETRO HORIZONTAL SPACE SHOOTER GAME ENGINE
+     7. RETRO HORIZONTAL SPACE SHOOTER GAME ENGINE (CLEAN VECTOR CANVAS)
      -------------------------------------------------------------------------- */
   const spawnSpot = document.getElementById('arcade-spawn-spot');
   const arcadeModal = document.getElementById('arcade-modal');
@@ -314,8 +314,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
         y: Math.random() * (canvas.height - 60) + 30,
         radius: type === 'asteroid' ? 16 : 14,
         speed: 1.8 + Math.random() * 1.5,
-        type: type,
-        angle: 0
+        type: type
       });
     }
 
@@ -372,6 +371,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
     ctx.save();
     ctx.translate(x, y);
 
+    // Thruster flame
     ctx.fillStyle = Math.random() > 0.5 ? '#ef4444' : '#f59e0b';
     ctx.beginPath();
     ctx.moveTo(-4, 8);
@@ -379,6 +379,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
     ctx.lineTo(-4, 16);
     ctx.fill();
 
+    // Main Body
     ctx.fillStyle = '#f59e0b';
     ctx.strokeStyle = '#020617';
     ctx.lineWidth = 1.5;
@@ -394,6 +395,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
     ctx.fill();
     ctx.stroke();
 
+    // Cockpit
     ctx.fillStyle = '#38bdf8';
     ctx.beginPath();
     ctx.ellipse(16, 12, 6, 3, 0, 0, Math.PI * 2);
@@ -428,6 +430,24 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
     ctx.fill();
     ctx.stroke();
 
+    ctx.restore();
+  }
+
+  function drawAlienCraft(x, y) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.fillStyle = '#ef4444';
+    ctx.strokeStyle = '#ffffff';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 12, 6, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+    
+    ctx.fillStyle = '#38bdf8';
+    ctx.beginPath();
+    ctx.arc(0, -2, 4, Math.PI, 0);
+    ctx.fill();
     ctx.restore();
   }
 
@@ -500,9 +520,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
           ctx.lineWidth = 2;
           ctx.stroke();
         } else {
-          ctx.font = '20px sans-serif';
-          ctx.textAlign = 'center';
-          ctx.fillText('🛸', e.x, e.y + 7);
+          drawAlienCraft(e.x, e.y);
         }
 
         for (let lIdx = lasers.length - 1; lIdx >= 0; lIdx--) {
@@ -589,7 +607,7 @@ LinkedIn : linkedin.com/in/yathartha-rastogi`;
       ctx.fillStyle = '#ef4444';
       ctx.font = 'bold 22px "Outfit", sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText('GAME OVER 💥', canvas.width / 2, canvas.height / 2 - 12);
+      ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2 - 12);
 
       ctx.fillStyle = '#ffffff';
       ctx.font = '13px "JetBrains Mono", monospace';
