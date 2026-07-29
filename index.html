@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yathartha Rastogi - Software Engineer & Developer</title>
+  <meta name="description" content="Portfolio of Yathartha Rastogi: Computer Science Engineer, Full-Stack Developer, 3x Hackathon Winner, and Technical Team Member at BitByBit Club." />
+  
+  <!-- Google Fonts: Inter, JetBrains Mono, Press Start 2P, Outfit, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@600;800;900&family=Press+Start+2P&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+
+  <!-- Retro Grid Background Overlay -->
+  <div class="grid-bg">
+    <svg aria-hidden="true" class="grid-svg">
+      <defs>
+        <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse" x="-1" y="-1">
+          <path d="M.5 40V.5H40" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="1"></path>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-pattern)"></rect>
+    </svg>
+  </div>
+
+  <!-- Floating Keyboard Navigation Bar -->
+  <nav class="glass-nav-container">
+    <div class="keyboard-base">
+      <button class="kbd-key esc-key hide-on-mobile" id="esc-btn" title="Reset View [ESC]">ESC</button>
+      <a href="#home" class="kbd-key active red-accent-key">Home</a>
+      <a href="#about" class="kbd-key hide-on-mobile">About</a>
+      <a href="#projects" class="kbd-key hide-on-mobile">Projects</a>
+      <a href="#achievements" class="kbd-key yellow-accent-key hide-on-mobile">Trophies</a>
+      <a href="#contact" class="kbd-key fn-key" id="nav-contact-btn">
+        Contact 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 10 4 15 9 20"></polyline><path d="M20 4v7a4 4 0 0 1-4 4H4"></path></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Wrapper -->
+  <main class="main-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-center">
+        
+        <!-- Live Status Pill & Social Links -->
+        <div class="hero-status-row">
+          <div class="status-badge">
+            <span class="status-dot pulsing"></span>
+            <span class="status-text">AVAILABLE FOR OPPORTUNITIES</span>
+          </div>
+          
+          <div class="social-links-inline">
+            <a href="https://github.com/yathartharastogi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+            </a>
+            <a href="https://linkedin.com/in/yathartha-rastogi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="mailto:yarag402@gmail.com" class="social-icon-btn" title="Send Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Avatar Ring & Greeting -->
+        <div class="hero-avatar-wrap">
+          <div class="avatar-ring">
+            <span class="avatar-text">YR</span>
+          </div>
+        </div>
+
+        <div class="greeting-text">HI, I AM</div>
+        
+        <!-- Interactive Name & Floating Tags -->
+        <div class="name-hero-container">
+          
+          <div class="floating-tag tag-blue" id="tag-software">
+            <span>💻 Software Engineer</span>
+          </div>
+
+          <div class="floating-tag tag-red" id="tag-genai">
+            <span>⚡ Full-Stack Developer</span>
+          </div>
+
+          <div class="floating-tag tag-yellow" id="tag-hackathon">
+            <span>🏆 3x Hackathon Winner</span>
+          </div>
+
+          <h1 class="chunky-name">
+            <span class="typewriter-name" id="typewriter">Yathartha</span><span class="blinking-cursor">_</span>
+          </h1>
+        </div>
+
+        <!-- Subtitle Role Banner -->
+        <p class="hero-role-banner">
+          Building high-performance full-stack web applications & desktop software.
+        </p>
+
+        <!-- Subtitle bio -->
+        <p class="hero-bio">
+          B.Tech CSE Student @ <span class="highlight-text vit-gold">VIT Bhopal University</span> (CGPA: <strong>9.07</strong>) • Technical Team Member @ <span class="highlight-text club-badge">BitByBit Club</span>.
+        </p>
+
+        <!-- Stat Counter Bar -->
+        <div class="hero-stats-bar">
+          <div class="hero-stat-item">
+            <span class="stat-number">9.07</span>
+            <span class="stat-label">VIT CGPA</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="stat-number">3x</span>
+            <span class="stat-label">Hackathon Wins</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="stat-number">6+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-buttons">
+          <a href="#contact" class="btn btn-black">
+            LET'S TALK
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#projects" class="btn btn-green">EXPLORE PROJECTS</a>
+          <button class="btn btn-outline" id="copy-email-hero-btn" title="Copy Email">
+            <span id="copy-btn-text">yarag402@gmail.com</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
+        </div>
+
+        <!-- Retro Easter Egg Interactive Spot -->
+        <div id="arcade-spawn-spot" class="spawn-spot-container" title="Click to launch Space Defender Arcade Game!">
+          <div class="spawn-pulse"></div>
+          <span class="spawn-label">🚀 LAUNCH HORIZONTAL SPACE SHOOTER</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT & TERMINAL SECTION -->
+    <section class="about-section" id="about">
+      <div class="terminal-perspective-wrap">
+        <div class="terminal-window">
+          
+          <!-- Terminal Header Bar -->
+          <div class="terminal-header-bar">
+            <div class="terminal-header-left">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-tabs">
+                <button class="term-tab active" data-tab="tab-whoami">whoami.sh</button>
+                <button class="term-tab" data-tab="tab-skills">skills.json</button>
+                <button class="term-tab" data-tab="tab-experience">experience.log</button>
+              </div>
+            </div>
+            <div class="terminal-status hide-on-mobile">bash - 80x24</div>
+          </div>
+
+          <!-- Terminal Body Content -->
+          <div class="terminal-body">
+            
+            <!-- TAB 1: WHOAMI -->
+            <div class="tab-content active" id="tab-whoami">
+              <div class="about-grid">
+                <div class="bio-col">
+                  <h2 class="terminal-section-title">
+                    <span class="blue-cmd">&gt;</span> WHOAMI
+                  </h2>
+                  <p class="bio-text">
+                    I am a Computer Science & Engineering undergraduate at <strong>VIT Bhopal University</strong> (CGPA: <strong>9.07</strong>) with a passion for building scalable web platforms, intuitive desktop applications, and solving complex algorithmic challenges.
+                  </p>
+                  <p class="bio-text">
+                    As a <strong>Technical Team Member at BitByBit Club</strong>, I lead website architectural planning, mentor team members by conducting code reviews, and collaborate with club leadership to deliver consistent, clean-code features.
+                  </p>
+                  <p class="bio-text">
+                    I thrive in competitive coding sprints, having secured 1st Place at both <em>Neuronex'26 Hackathon</em> (building <a href="https://github.com/yathartharastogi/NeuroCharge" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline;">NeuroCharge</a>) and <em>PydroidX Hackathon</em>, and 2nd Place at <em>Startathon 2026</em> (ML training model).
+                  </p>
+                </div>
+
+                <div class="terminal-sidebar">
+                  <div class="term-box">
+                    <span class="term-box-title">CURRENT STATUS</span>
+                    <ul class="term-list">
+                      <li>⚡ <strong>Role:</strong> Technical Team Member @ BitByBit Club</li>
+                      <li>🏆 <strong>Hackathons:</strong> 3x Podium Winner</li>
+                      <li>📍 <strong>Location:</strong> India</li>
+                    </ul>
+                  </div>
+
+                  <div class="term-box">
+                    <span class="term-box-title">INTERESTS & FOCUS</span>
+                    <div class="focus-pills">
+                      <span class="focus-pill">Full-Stack Web</span>
+                      <span class="focus-pill">Python Desktop Apps</span>
+                      <span class="focus-pill">Generative AI & ML</span>
+                      <span class="focus-pill">System Design</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: SKILLS.JSON -->
+            <div class="tab-content" id="tab-skills">
+              <h2 class="terminal-section-title">
+                <span class="green-cmd">&gt;</span> CAT ./SKILLS.JSON
+              </h2>
+              
+              <div class="code-block-wrap">
+                <pre class="json-code"><code><span class="json-key">"developer_skills"</span>: {
+  <span class="json-key">"languages"</span>: [<span class="json-str">"Python"</span>, <span class="json-str">"C++"</span>, <span class="json-str">"Java"</span>, <span class="json-str">"JavaScript"</span>, <span class="json-str">"SQL"</span>, <span class="json-str">"HTML"</span>, <span class="json-str">"CSS"</span>],
+  <span class="json-key">"core_concepts"</span>: [
+    <span class="json-str">"Data Structures & Algorithms"</span>, <span class="json-str">"Generative AI"</span>, 
+    <span class="json-str">"Machine Learning"</span>, <span class="json-str">"REST APIs"</span>, <span class="json-str">"System Design"</span>, <span class="json-str">"OOP"</span>
+  ],
+  <span class="json-key">"frameworks_and_tools"</span>: [
+    <span class="json-str">"React"</span>, <span class="json-str">"Next.js"</span>, <span class="json-str">"Flask"</span>, <span class="json-str">"Tailwind CSS"</span>, 
+    <span class="json-str">"Prisma"</span>, <span class="json-str">"LangChain"</span>, <span class="json-str">"Git/GitHub"</span>, <span class="json-str">"Pandas"</span>, <span class="json-str">"NumPy"</span>, <span class="json-str">"Matplotlib"</span>
+  ]
+}</code></pre>
+              </div>
+            </div>
+
+            <!-- TAB 3: EXPERIENCE.LOG -->
+            <div class="tab-content" id="tab-experience">
+              <h2 class="terminal-section-title">
+                <span class="yellow-cmd">&gt;</span> CAT ./EXPERIENCE.LOG
+              </h2>
+
+              <div class="arcade-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-badge badge-work"></div>
+                  <details class="exp-card-arcade" open>
+                    <summary class="arcade-summary">
+                      <div class="summary-left">
+                        <h3 class="arcade-role">Technical Team Member</h3>
+                        <h4 class="arcade-company">BitByBit Club • VIT Bhopal</h4>
+                      </div>
+                      <div class="summary-right">
+                        <span class="arcade-badge badge-active">Apr 2026 - Present</span>
+                        <span class="arcade-chevron">▼</span>
+                      </div>
+                    </summary>
+                    <div class="arcade-body">
+                      <ul class="arcade-bullets">
+                        <li>Lead the development and architectural planning of the club website, coordinating tasks to ensure timely milestone delivery.</li>
+                        <li>Mentor team members by providing technical guidance, conducting code reviews, and resolving development challenges.</li>
+                        <li>Collaborate with leadership to translate requirements into features, maintaining consistency and clean code practices.</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+              </div>
+            </div>
+
+            <!-- INTERACTIVE CLI CONSOLE PROMPT -->
+            <div class="cli-console-line">
+              <span class="cli-prompt">yathartha@portfolio:~$</span>
+              <input type="text" id="cli-input" class="cli-input-box" placeholder="type 'help' or 'skills' or 'projects'..." autocomplete="off" />
+            </div>
+            <div id="cli-output" class="cli-output-area"></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIDE QUESTS / PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <div class="section-tag">PORTFOLIO WORK</div>
+        <h2 class="section-title">FEATURED SIDE QUESTS</h2>
+        <p class="section-subtitle">Web platforms, analytics engines, and desktop applications built for impact.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web & Analytics</button>
+        <button class="filter-btn" data-filter="python">Python & Desktop</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        
+        <!-- Project 1: GitHub Recapped -->
+        <article class="project-card" data-category="web">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="m-dot red"></span><span class="m-dot yellow"></span><span class="m-dot green"></span>
+              </div>
+              <div class="mockup-url">https://github-recapped.dev</div>
+            </div>
+            <div class="mockup-content mockup-bg-analytics">
+              <div class="visual-diagram">
+                <div class="diagram-bar bar-1"></div>
+                <div class="diagram-bar bar-2"></div>
+                <div class="diagram-bar bar-3"></div>
+                <div class="diagram-bar bar-4"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <div class="project-type-tag">FULL STACK • ANALYTICS</div>
+              <a href="https://github.com/yathartharastogi" target="_blank" rel="noopener noreferrer" class="proj-icon-link" title="View Source Code on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              </a>
+            </div>
+            
+            <h3 class="project-title">GitHub Recapped</h3>
+            <p class="project-subtitle">GitHub Developer Activity & Analytics Platform</p>
+
+            <p class="project-desc">
+              Built a responsive web application to visualize GitHub developer activity and repository insights via API integration.
+            </p>
+
+            <ul class="project-highlights">
+              <li>Designed interactive analytics dashboards using <strong>Recharts</strong> and <strong>React</strong>.</li>
+              <li>Optimized backend data fetching performance using <strong>Prisma ORM</strong>.</li>
+              <li>Calculates activity streaks, commit velocity, and repository language breakdowns.</li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Prisma</span>
+              <span class="tech-tag">Recharts</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Digital Declutterer -->
+        <article class="project-card" data-category="python">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="m-dot red"></span><span class="m-dot yellow"></span><span class="m-dot green"></span>
+              </div>
+              <div class="mockup-url">desktop://digital-declutterer.app</div>
+            </div>
+            <div class="mockup-content mockup-bg-gui">
+              <div class="visual-gui-card">
+                <div class="gui-pill">💰 Subscription & Expense Manager</div>
+                <div class="gui-line"></div>
+                <div class="gui-line short"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <div class="project-type-tag">DESKTOP GUI • UTILITY</div>
+              <a href="https://github.com/yathartharastogi" target="_blank" rel="noopener noreferrer" class="proj-icon-link" title="View Source Code on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              </a>
+            </div>
+            
+            <h3 class="project-title">Digital Declutterer</h3>
+            <p class="project-subtitle">Subscription & Expense Manager Application</p>
+
+            <p class="project-desc">
+              Developed a desktop GUI application to seamlessly manage recurring subscriptions and digital services.
+            </p>
+
+            <ul class="project-highlights">
+              <li>Implemented an automated reminder system for upcoming bill payments.</li>
+              <li>Categorized expense tracking to improve user financial organization.</li>
+              <li>Built an intuitive interface using Python's <strong>CustomTkinter</strong>.</li>
+            </ul>
+
+            <div class="project-tech-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">CustomTkinter</span>
+              <span class="tech-tag">Desktop App</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- HACKATHONS & CERTIFICATIONS SECTION -->
+    <section class="achievements-section" id="achievements">
+      
+      <!-- Hackathons Trophy Shelf -->
+      <div class="trophy-section">
+        <div class="section-header">
+          <div class="section-tag yellow-tag">TROPHY ROOM</div>
+          <h2 class="section-title">HACKATHON VICTORIES</h2>
+          <p class="section-subtitle">Coding competitions & podium finishes.</p>
+        </div>
+
+        <div class="trophy-grid">
+          
+          <div class="trophy-card gold-card">
+            <div class="trophy-card-header">
+              <div class="trophy-badge">🏆 1ST POSITION</div>
+              <a href="https://github.com/yathartharastogi/NeuroCharge" target="_blank" rel="noopener noreferrer" class="proj-icon-link" title="View NeuroCharge Repository on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              </a>
+            </div>
+            <h3 class="trophy-title">Neuronex'26 Hackathon</h3>
+            <span class="trophy-year">WINNER • 2026</span>
+            <p class="trophy-desc">Awarded 1st position for engineering <a href="https://github.com/yathartharastogi/NeuroCharge" target="_blank" rel="noopener noreferrer" style="color: #b45309; text-decoration: underline; font-weight: 700;">NeuroCharge</a>, an innovative project built during the 24-hour hackathon sprint.</p>
+          </div>
+
+          <div class="trophy-card silver-card">
+            <div class="trophy-badge">🥈 2ND POSITION</div>
+            <h3 class="trophy-title">Startathon Hackathon</h3>
+            <span class="trophy-year">RUNNER UP • 2026</span>
+            <p class="trophy-desc">Secured 2nd position for engineering a Machine Learning (ML) training model & dataset processing pipeline.</p>
+          </div>
+
+          <div class="trophy-card gold-card">
+            <div class="trophy-badge">🏆 1ST POSITION</div>
+            <h3 class="trophy-title">PydroidX Hackathon</h3>
+            <span class="trophy-year">WINNER • 2025</span>
+            <p class="trophy-desc">Claimed 1st position by engineering a high-performance Python application.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Certifications Wall -->
+      <div class="certs-section">
+        <div class="section-header">
+          <div class="section-tag blue-tag">CREDENTIALS</div>
+          <h2 class="section-title">CERTIFICATIONS & TRAINING</h2>
+        </div>
+
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-provider">COURSERA</div>
+            <h3 class="cert-name">IBM RAG and Agentic AI</h3>
+            <p class="cert-desc">Multi-agent systems, vector index retrieval, and RAG pipelines.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-provider">COURSERA</div>
+            <h3 class="cert-name">Google AI Professional</h3>
+            <p class="cert-desc">Machine learning models, neural networks, and AI deployment.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-provider">NPTEL</div>
+            <h3 class="cert-name">Cloud Computing Paradigms</h3>
+            <p class="cert-desc">Distributed cloud architecture, virtualization, and containers.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-provider">COURSERA</div>
+            <h3 class="cert-name">Computer Networking</h3>
+            <p class="cert-desc">TCP/IP, HTTP/S, DNS routing, and network protocol security.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-provider">COURSERA</div>
+            <h3 class="cert-name">Adobe Graphic Designer</h3>
+            <p class="cert-desc">UI/UX visual hierarchy, typography, and digital asset composition.</p>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-provider">NPTEL</div>
+            <h3 class="cert-name">Marketing Analytics</h3>
+            <p class="cert-desc">Quantitative decision models and metrics-driven market insights.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="contact-card">
+        <div class="contact-header">
+          <span class="contact-tag">LET'S CONNECT</span>
+          <h2 class="contact-title">BUILD SOMETHING GREAT TOGETHER</h2>
+          <p class="contact-sub">Have an exciting opportunity, project idea, or hackathon collaboration? Get in touch!</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <div class="contact-details">
+            
+            <div class="contact-item">
+              <div class="item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </div>
+              <div class="item-info">
+                <span class="item-label">EMAIL ADDRESS</span>
+                <a href="mailto:yarag402@gmail.com" class="item-val">yarag402@gmail.com</a>
+              </div>
+              <button class="copy-pill-btn" onclick="copyText('yarag402@gmail.com', this)">Copy</button>
+            </div>
+
+            <div class="contact-item">
+              <div class="item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="item-info">
+                <span class="item-label">PHONE NUMBER</span>
+                <a href="tel:+917984509001" class="item-val">+91 79845 09001</a>
+              </div>
+              <button class="copy-pill-btn" onclick="copyText('+917984509001', this)">Copy</button>
+            </div>
+
+            <div class="contact-item">
+              <div class="item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              </div>
+              <div class="item-info">
+                <span class="item-label">GITHUB PROFILE</span>
+                <a href="https://github.com/yathartharastogi" target="_blank" rel="noopener noreferrer" class="item-val">github.com/yathartharastogi</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <div class="item-info">
+                <span class="item-label">LINKEDIN PROFILE</span>
+                <a href="https://linkedin.com/in/yathartha-rastogi" target="_blank" rel="noopener noreferrer" class="item-val">linkedin.com/in/yathartha-rastogi</a>
+              </div>
+            </div>
+
+          </div>
+
+          <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name">YOUR NAME</label>
+              <input type="text" id="name" required placeholder="Jane Doe" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">YOUR EMAIL</label>
+              <input type="email" id="email" required placeholder="jane@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">MESSAGE</label>
+              <textarea id="message" rows="4" required placeholder="Hi Yathartha, I would love to connect about..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-black form-submit-btn">
+              SEND MESSAGE 🚀
+            </button>
+            <div id="form-status" class="form-status-msg"></div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-left">
+      Designed & Built with <span class="heart-icon">⚡</span> by <strong>Yathartha Rastogi</strong>
+    </div>
+    <div class="footer-center">
+      All rights reserved © 2026
+    </div>
+    <div class="footer-right">
+      <a href="https://github.com/yathartharastogi" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span>•</span>
+      <a href="https://linkedin.com/in/yathartha-rastogi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+
+  <!-- Retro Horizontal Space Shooter Arcade Modal Overlay -->
+  <div id="arcade-modal" class="modal-overlay hidden">
+    <div class="modal-content arcade-window space-window">
+      <div class="terminal-header-bar">
+        <div class="terminal-dots">
+          <span class="dot red" id="close-modal-btn"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-title">🚀 HORIZONTAL SPACE SHOOTER</div>
+      </div>
+      <div class="arcade-game-body">
+        <p class="game-instructions">
+          <strong>WASD / Arrow Keys</strong> to Move | <strong>SPACEBAR</strong> to Shoot Lasers Right!
+        </p>
+        
+        <!-- HTML5 Canvas for Horizontal Space Shooter -->
+        <canvas id="space-canvas" width="460" height="260" class="space-canvas"></canvas>
+
+        <div class="game-controls space-controls">
+          <div class="control-row-horiz">
+            <button class="btn btn-outline" id="btn-up">▲ UP</button>
+            <button class="btn btn-outline" id="btn-down">▼ DOWN</button>
+            <button class="btn btn-outline" id="btn-left">◄ LEFT</button>
+            <button class="btn btn-outline" id="btn-right">RIGHT ►</button>
+            <button class="btn btn-black btn-fire" id="btn-fire">🔥 FIRE [SPACE]</button>
+          </div>
+        </div>
+
+        <button class="btn btn-black modal-close-action" id="close-arcade-action">CLOSE GAME</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
